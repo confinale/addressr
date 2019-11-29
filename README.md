@@ -1,6 +1,6 @@
 # addressr
 
-addressr is a kotlin library for parsing addresses using worldwide templates from [OpenCageData](https://github.com/OpenCageData/address-formatting).
+addressr is a kotlin library for formatting addresses using worldwide templates from [OpenCageData](https://github.com/OpenCageData/address-formatting).
 
 ## Quick example
 Just pass an address object and you get a formatted address based on locale convenience
