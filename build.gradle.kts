@@ -10,7 +10,7 @@ plugins {
 
 group = "ch.confinale"
 version = "1.0-SNAPSHOT"
-base.archivesBaseName = "address-formatter-kt"
+base.archivesBaseName = "addressr"
 
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
@@ -62,9 +62,9 @@ artifacts {
 
 publishing {
     publications {
-        create<MavenPublication>("address-formatter-kt") {
+        create<MavenPublication>("addressr") {
             groupId = "ch.confinale"
-            artifactId = "address-formatter-kt"
+            artifactId = "addressr"
             version = "1.0"
 
             from(components["java"])
@@ -72,7 +72,7 @@ publishing {
             artifact(javadocJar.get())
 
             pom {
-                name.set("address-formatter-kt")
+                name.set("addressr")
                 description.set("A library to format addresses in its locale format")
                 url.set("http://www.example.com/library")
 
