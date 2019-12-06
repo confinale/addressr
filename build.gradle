@@ -6,7 +6,7 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 group = "ch.confinale"
-version = "1.0"
+version = "1.0.1"
 archivesBaseName = "addressr"
 
 repositories {
