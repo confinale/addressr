@@ -99,7 +99,7 @@ internal class AddressFormatterTest {
         println("****************************")
         println()
 
-        val result = formatter.formatLocale(address)
+        val result = formatter.format(address)
         println(result)
 
         assertEquals(expectedRepresentation, result)

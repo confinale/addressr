@@ -11,7 +11,14 @@ class AddressFormatter(
     private val configuration: OpenCageDataConfiguration
 ) {
 
-    fun formatLocale(address: Address): String {
+    /**
+     * Pass the Address instance and create a string representation based on the country.
+     *
+     * @param address The address instance.
+     *
+     * @return A string representation of the given address instance.
+     */
+    fun format(address: Address): String {
         val template = configuration.templateForCountry(address.country_code)
         val mustacheFactory = DefaultMustacheFactory()
         val mustache = mustacheFactory.compile(StringReader(template), address.country_code)
