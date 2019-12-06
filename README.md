@@ -2,6 +2,24 @@
 
 addressr is a kotlin library for formatting addresses using worldwide templates from [OpenCageData](https://github.com/OpenCageData/address-formatting).
 
+## Installation
+
+Using gradle:
+```
+dependencies {
+    implementation 'ch.confinale:addressr'
+}
+```
+
+Using maven:
+```
+<dependency>
+  <groupId>ch.confinale</groupId>
+  <artifactId>addressr</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
 ## Quick example
 Just pass an address object and you get a formatted address based on locale convenience
 
