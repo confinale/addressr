@@ -7,7 +7,7 @@ addressr is a kotlin library for formatting addresses using worldwide templates 
 Using gradle:
 ```
 dependencies {
-    implementation 'ch.confinale:addressr:1.0.1'
+    implementation 'ch.confinale:addressr:1.1.0'
 }
 ```
 
@@ -16,7 +16,7 @@ Using maven:
 <dependency>
   <groupId>ch.confinale</groupId>
   <artifactId>addressr</artifactId>
-  <version>1.0.1</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
@@ -26,9 +26,25 @@ Just pass an address object and you get a formatted address based on locale conv
 ```kotlin
 // initialize formatter instance
 val formatter = AddressFormatter(OpenCageDataConfiguration())
+val address = Address(
+                  house = "House",
+                  road = "Road",
+                  house_number = "1",
+                  postcode = "1234",
+                  city = "Vaduz",
+                  country = "Liechtenstein",
+                  country_code = "LI"
+              )
 
 // format the address using entity
 val formattedAddress = formatter.format(address)
+
+
+// result :
+House
+Road 1
+1234 Vaduz
+Liechtenstein
 ```
 
 ## Configuration
@@ -42,7 +58,6 @@ We use the templates defined in ```worldwide.yaml```. In case there is an unknon
 the default template is used (in that case ```generic1``` in ```workdwide.yaml```).
 
 So far there is no support for the following features, which exist in ```wordwide.yaml```:
-* use_country
 * change_country
 * replace
 * postformat_replace
