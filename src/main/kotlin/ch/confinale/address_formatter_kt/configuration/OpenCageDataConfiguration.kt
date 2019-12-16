@@ -2,6 +2,7 @@ package ch.confinale.address_formatter_kt.configuration
 
 import ch.confinale.address_formatter_kt.utils.WW_ADDRESS_TEMPLATE
 import ch.confinale.address_formatter_kt.utils.WW_DEFAULT
+import ch.confinale.address_formatter_kt.utils.WW_USE_COUNTRY
 import ch.confinale.address_formatter_kt.utils.YAML_WORLWIDE
 import org.yaml.snakeyaml.Yaml
 
@@ -23,6 +24,11 @@ class OpenCageDataConfiguration() : Configuration {
     override fun templateForCountry(countryCode: String): String {
         settings.get(countryCode).let { setting ->
             if (setting != null) {
+                setting.get(WW_USE_COUNTRY).let {
+                    if (it != null && it.isNotBlank()) {
+                        return templateForCountry(it!!)
+                    }
+                }
                 setting.get(WW_ADDRESS_TEMPLATE).let { template ->
                     return template!!
                 }

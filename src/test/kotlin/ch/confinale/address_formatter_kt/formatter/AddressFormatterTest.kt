@@ -87,6 +87,22 @@ internal class AddressFormatterTest {
                         "Road 12345678\n" +
                         "987654 City\n" +
                         "INVALID COUNTRY"
+            ),
+            Arguments.of(
+                "Test LI (use_country) template",
+                Address(
+                    house = "FMA Liechtenstein",
+                    road = "Landstrasse",
+                    house_number = "109",
+                    postcode = "9494",
+                    city = "Vaduz",
+                    country = "Liechtenstein",
+                    country_code = "LI"
+                ),
+                "FMA Liechtenstein\n" +
+                        "Landstrasse 109\n" +
+                        "9494 Vaduz\n" +
+                        "Liechtenstein"
             )
         )
 
