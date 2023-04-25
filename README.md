@@ -7,7 +7,7 @@ addressr is a kotlin library for formatting addresses using worldwide templates 
 Using gradle:
 ```
 dependencies {
-    implementation 'ch.confinale:addressr:1.1.0'
+    implementation 'ch.confinale:addressr:1.2.0'
 }
 ```
 
@@ -16,7 +16,7 @@ Using maven:
 <dependency>
   <groupId>ch.confinale</groupId>
   <artifactId>addressr</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
 </dependency>
 ```
 
